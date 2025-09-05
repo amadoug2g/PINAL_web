@@ -18,7 +18,7 @@ if "active_file" not in st.session_state:
     st.session_state.active_file = None
 
 # Upload
-uploaded_file = st.file_uploader(" ", type=["mp3", "wav", "m4a"])
+uploaded_file = st.file_uploader(" ", type=["mp3", "wav", "m4a", "mp4"])
 if uploaded_file and st.button("🚀 Transcribe"):
     with st.spinner("Transcribing file..."):
         files = {"file": (uploaded_file.name, uploaded_file, uploaded_file.type)}
